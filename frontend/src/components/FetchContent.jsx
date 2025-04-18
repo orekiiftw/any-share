@@ -16,7 +16,7 @@ function FetchContent() {
     setContentType(null);
     
     try {
-      const response = await fetch(`http://localhost:3000/api/fetch-content?token=${token}`);
+      const response = await fetch(`https://any-share-yz79.vercel.app/api/fetch-content?token=${token}`);
       
       if (!response.ok) {
         throw new Error("Failed to fetch content");

@@ -18,7 +18,7 @@ function MultiInput() {
     formData.append("file", uploadedFile);
 
     try {
-      const response = await fetch("http://localhost:3000/api/upload-file", {
+      const response = await fetch("https://any-share-yz79.vercel.app/api/upload-file", {
         method: "POST",
         body: formData,
       });
@@ -45,7 +45,7 @@ function MultiInput() {
     setError("");
     
     try {
-      const response = await fetch("http://localhost:3000/api/upload-text", {
+      const response = await fetch("https://any-share-yz79.vercel.app/api/upload-text", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
