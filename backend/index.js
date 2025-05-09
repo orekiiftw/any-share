@@ -12,8 +12,11 @@ import fetchContentRouter from './routers/fetchContent.js';
 const app = express();
 connectDB();
 
-app.use(cors());
-
+app.use(cors({
+  origin: 'https://anyshare.orekii.me',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
 app.use(express.json());
 
